@@ -65,22 +65,23 @@ void foo(int *&ar, int size) {
 }
 
 
-int choice1 = 0;
-void mainMenu(void) {
 
+int mainMenu(void) {
+    int choice1 = 0;
     cout << "Main Menu\n";
     cout << "1 - Start  \n";
     cout << "2 - Print result array\n";
     cout << "3 - Quit\n";
     cout << "Please choose: ";
     cin >> choice1;
-
+    return choice1;
 }
 
 void menu(int ar[]) {
     int size=0;
+    int choice1 = 0;
     do {        
-        mainMenu();
+        choice1=mainMenu();
         switch (choice1) {
 
         case 1:
